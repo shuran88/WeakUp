@@ -1,0 +1,162 @@
+body {
+	background: linear-gradient(black, darkblue, lightskyblue, white);
+	background-size: 400% 400%;
+	animation: backScroll 8s linear 1;
+	height: 100vh;
+	background-position: 0% 100%;
+	}
+	#link {
+	position: sticky;
+	top: 540px;
+	left: 300px;
+	font-size: 1in;
+	font-family: serif;
+	color: gold;
+	text-shadow: 10px 10px 8px deepskyblue;
+	animation: link 15s linear 0s 1 normal;
+	align-self: flex-end;
+	}
+	#bird {
+	position: fixed;
+	top: 10px;
+	left: 0px;
+	opacity: 0;
+	animation: bird 8s linear 6s 1 normal;
+	-webkit-animation: bird 8s linear 6s 1 normal;
+}
+	#bird2 {
+	position: sticky;
+	top: 12px;
+	left: 0px;
+	opacity: 0;
+	animation: bird 7s linear 6s 1 normal;
+	-webkit-animation: bird 7s linear 6s 1 normal;
+}
+	#cloud1 {
+	position: fixed;
+	top: 13.5%;
+	left: 32%;
+	z-index: 1;
+	width: 5%;
+	animation: getLight 9s linear 1 normal;
+	-webkit-animation: getLight 9s linear 1 normal;
+}
+	#cloud2 {
+	position: fixed;
+	top: 9%;
+	left: 62%;
+	width: 5%;
+	animation: getLight 9s linear 1 normal;
+	-webkit-animation: getLight 9s linear 1 normal;
+}
+	#comet {
+	position: fixed;
+	top: 15%;
+	left: 28%;
+	opacity: 0;
+	animation: comet 1.5s linear 1.5s 1 normal;
+	-webkit-animation: comet 1.5s linear 1.5s 1 normal;
+}
+	#bottom img {
+	z-index: 2;
+	position: fixed;
+	top: 45%;
+	animation: getLight 7s linear 1 normal;
+	-webkit-animation: getLight 7s linear 1 normal;
+}
+	#sun {
+	z-index: 1;
+	animation: sunrise 7s linear 0s 1 normal;
+	position: fixed;
+	top: 10%;
+	left: 50%;
+	opacity: 1;
+	}
+
+	@keyframes sunrise {
+		0% {transform: translate(50%, 280%); opacity: 0;}
+		9% {opacity: 0;}
+		10% {opacity: 0.01;}
+		100% {transform: translate(0%, 0%); opacity: 1;}
+		}
+		#Good {
+		position: fixed;
+		font-style: fantasy;
+		font-size: 50px;
+		left: 30%;
+		top: 10%;
+		font-weight: bold;
+		color: darkred;
+		text-shadow: -5px 5px 5px gray;
+		animation: good 10s linear 0s 1 normal;
+		z-index: 2;
+		-webkit-animation: good 10s linear 0s 1 normal;
+}
+		#Morning {
+		position: fixed;
+		font-style: fantasy;
+		font-size: 50px;
+		left: 65%;
+		top: 10%;
+		font-weight: bold;
+		color: darkred;
+		text-shadow: 5px 5px 5px gray;
+		animation: morning 10s linear 0s 1 normal;
+		-webkit-animation: morning 10s linear 0s 1 normal;
+}
+		@keyframes good {
+		0% {transform: translate(-700px, 0%)}
+		70% {transform: translate(-700px, 0%)}
+		85% {transform: translate(0%, 0%)}
+		90% {transform: translate(-100px, 10px)}
+		95% {transform: translate(0%, 0%)}
+		96% {transform: rotate(9deg)}
+		97% {transform: rotate(-9deg)}
+		98% {transform: rotate(9deg)}
+		99% {transform: rotate(-9deg)}
+		100% {transform: translate(0%, 0%)}
+		}
+		@keyframes morning {
+		0% {transform: translate(700px, 0%)}
+		70% {transform: translate(700px, 0%)}
+		85% {transform: translate(0%, 0%)}
+		90% {transform: translate(100px, 10px)}
+		95% {transform: translate(0%, 0%)}
+		96% {transform: rotate(9deg)}
+		97% {transform: rotate(-9deg)}
+		98% {transform: rotate(9deg)}
+		99% {transform: rotate(-9deg)}
+		100% {transform: translate(0%, 0%)}
+		}
+		@keyframes backScroll {
+		0% {
+		background-position: 0% 0%;
+		}
+		50% {
+		background-position: 0% 50%;
+		}
+		100% {
+		background-position: 0% 100%;
+		}
+		}
+		@keyframes getLight {
+		0% {opacity: 0}
+		100% {opacity: 1}
+		}
+		@keyframes comet {
+		0% {transform: translate(0%, 0%); opacity: 1}
+		100% {transform: translate(-800px, 250px); opacity: 0;}
+		}
+		@keyframes bird {
+		0% {transform: translate(-50px, 200px);opacity: 1;}
+		20% {transform: translate(300px, 0px)}
+		40% {transform: translate(600px, 0px)}
+		60% {transform: translate(800px, 200px)}
+		100% {transform: translate(1550px, 0%);opacity: 1;}
+		}
+		@keyframes link {
+		0% {opacity: 0; text-shadow: 0px 0px 0px deepskyblue}
+		50% {opacity: 0; text-shadow: 0px 0px 0px deepskyblue}
+		100% {opacity: 1; text-shadow: 10px 10px 8px deepskyblue}
+		
+		}
